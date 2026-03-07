@@ -419,12 +419,14 @@
   .card-front, .card-back {
     position: absolute;
     inset: 0;
-    padding: 40px 32px;
+    padding: 28px 24px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
   }
 
   .card-front {
@@ -435,6 +437,8 @@
     background: var(--accent);
     transform: rotateY(180deg);
     justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .card-front::after {
@@ -481,18 +485,23 @@
   .card:hover .card-hint::after { transform: translateX(4px); }
 
   .card-back p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--black);
-    line-height: 1.75;
+    line-height: 1.65;
     font-weight: 400;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    margin: 0;
   }
 
   .card-back-label {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     letter-spacing: 0.1em;
     color: rgba(0,0,0,0.4);
-    margin-bottom: 12px;
+    margin-bottom: 4px;
+    flex-shrink: 0;
   }
 
   /* WHO GETS IN */
