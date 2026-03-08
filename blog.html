@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="aicabal_favicon_dark.png">
+<link rel="apple-touch-icon" href="aicabal_pfp_400_square_dark.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — AI Cabal | Perspectives on AI in India</title>
+<meta name="description" content="Perspectives, opinions and signal from India's most serious AI network. Written by builders, leaders and practitioners in the trenches.">
+<meta name="author" content="AI Cabal">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="geo.region" content="IN">
+<link rel="canonical" href="https://aicabal.xyz/blog">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Cabal">
+<meta property="og:title" content="Blog — AI Cabal | Perspectives on AI in India">
+<meta property="og:description" content="Perspectives, opinions and signal from India's most serious AI network.">
+<meta property="og:url" content="https://aicabal.xyz/blog">
+<meta property="og:image" content="https://aicabal.xyz/aicabal_xl_dark.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@theaicabal">
+<meta name="twitter:title" content="Blog — AI Cabal | Perspectives on AI in India">
+<meta name="twitter:description" content="Perspectives, opinions and signal from India's most serious AI network.">
+<meta name="twitter:image" content="https://aicabal.xyz/aicabal_xl_dark.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://aicabal.xyz/blog",
+  "name": "AI Cabal Blog",
+  "description": "Perspectives on AI in India from builders, leaders and practitioners",
+  "url": "https://aicabal.xyz/blog",
+  "publisher": { "@id": "https://aicabal.xyz/#organization" }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808;
+    --off-black: #0e0e0e;
+    --dark: #141414;
+    --border: #222;
+    --muted: #666;
+    --dim: #a0a0a0;
+    --text: #d4d0c8;
+    --white: #f0ece0;
+    --accent: #c8f03c;
+    --accent-dim: #a8cc28;
+    --red: #e84040;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    cursor: none;
+    overflow-x: hidden;
+  }
+
+  .accent { color: var(--accent); }
+
+  .cursor {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, width 0.2s, height 0.2s;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(200,240,60,0.4);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.3s, height 0.3s, border-color 0.3s;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9990;
+    opacity: 0.6;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  nav.scrolled {
+    background: rgba(8,8,8,0.92);
+    border-color: var(--border);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+  /* BLOG HERO */
+  .blog-hero {
+    padding: 160px 48px 80px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .blog-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.2;
+    mask-image: radial-gradient(ellipse 80% 80% at 20% 50%, black 20%, transparent 100%);
+  }
+  .blog-hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+  .blog-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 8vw, 120px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+  .blog-hero h1 span { color: var(--accent); }
+  .blog-hero p {
+    font-size: 17px;
+    color: var(--dim);
+    max-width: 480px;
+    line-height: 1.65;
+  }
+
+  /* BLOG GRID */
+  .blog-grid-section {
+    padding: 80px 48px 120px;
+  }
+
+  .blog-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .blog-count::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .blog-card {
+    background: var(--off-black);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.2s;
+    overflow: hidden;
+  }
+  .blog-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .blog-card:hover { background: var(--dark); }
+  .blog-card:hover::after { transform: scaleX(1); }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .blog-card-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .blog-card-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(200,240,60,0.3);
+    padding: 3px 10px;
+  }
+
+  .blog-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+  }
+  .blog-card:hover .blog-card-img { filter: grayscale(0%); }
+
+  .blog-card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .blog-card-excerpt {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .blog-card-author {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .blog-card-read {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+  .blog-card:hover .blog-card-read { gap: 10px; }
+
+  /* FEATURED (first card spans 2 cols) */
+  .blog-card.featured {
+    grid-column: span 2;
+  }
+  .blog-card.featured .blog-card-img {
+    height: 260px;
+  }
+  .blog-card.featured .blog-card-title {
+    font-size: 36px;
+  }
+
+  /* FOOTER */
+  .footer-left .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    padding: 80px 48px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 0;
+    align-items: center;
+  }
+  .footer-left .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .footer-left .logo span { color: var(--accent); }
+  .footer-left p {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  .twitter-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .twitter-link:hover { color: var(--accent); }
+  .footer-middle {
+    text-align: center;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    padding: 0 64px;
+  }
+  .dispatch-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .dispatch-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .dispatch-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .subscribe-row { display: flex; justify-content: center; }
+  .footer-right { text-align: right; }
+  .footer-right .footer-cta {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(24px, 3vw, 40px);
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .footer-right .footer-cta .accent { color: var(--accent); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--black);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+  .btn-primary:hover { background: #d8ff44; transform: translateY(-2px); }
+
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .blog-hero { padding: 120px 24px 60px; }
+    .blog-grid-section { padding: 60px 24px 80px; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .blog-card.featured { grid-column: span 1; }
+    footer { grid-template-columns: 1fr; gap: 48px; padding: 60px 24px; text-align: center; }
+    .footer-middle { border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
+    .footer-right { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo">AI <span>CABAL</span></a>
+  <ul class="nav-links">
+    <li><a href="/#what">What is it</a></li>
+    <li><a href="/#inside">Inside</a></li>
+    <li><a href="/#who">Who gets in</a></li>
+    <li><a href="/blog" class="active">Blog</a></li>
+  </ul>
+</nav>
+
+<section class="blog-hero">
+  <div class="blog-hero-bg"></div>
+  <div class="blog-hero-tag">// Signal from the trenches</div>
+  <h1>THE<br><span>DISPATCH.</span></h1>
+  <p>Perspectives, opinions and unfiltered takes from the people building AI in India. No tutorials. No vendor pitches.</p>
+</section>
+
+<section class="blog-grid-section">
+  <div class="blog-count reveal">03 posts — updated March 2026</div>
+
+  <div class="blog-grid reveal">
+
+    <!-- Post 1 - Featured -->
+    <a href="/blog/india-ai-community-conversation-problem.html" class="blog-card featured">
+      <div class="blog-card-meta">
+        <span class="blog-card-date">February 15, 2026</span>
+        <span class="blog-card-tag">Community</span>
+      </div>
+      <img src="blog-img-1.png" alt="Why India's AI Community Has a Conversation Problem" class="blog-card-img" loading="lazy">
+      <div class="blog-card-title">Why India's AI Community Has a Conversation Problem (And How We're Fixing It)</div>
+      <div class="blog-card-excerpt">India has no shortage of AI talent. What it lacks is a room where that talent actually talks to each other — honestly, deeply, without the performance. Here's why that gap exists and what we're building to close it.</div>
+      <div class="blog-card-footer">
+        <span class="blog-card-author">Loveneesh Dhir</span>
+        <span class="blog-card-read">Read → </span>
+      </div>
+    </a>
+
+    <!-- Post 2 -->
+    <a href="/blog/ai-stack-india-builders-debate.html" class="blog-card">
+      <div class="blog-card-meta">
+        <span class="blog-card-date">February 24, 2026</span>
+        <span class="blog-card-tag">Engineering</span>
+      </div>
+      <img src="blog-img-2.png" alt="The AI Stack Every Indian Builder Is Debating Right Now" class="blog-card-img" loading="lazy">
+      <div class="blog-card-title">The AI Stack Every Indian Builder Is Debating Right Now</div>
+      <div class="blog-card-excerpt">From model choice to RAG architecture to agent frameworks — the conversations inside India's best AI teams right now are sharper, messier and more opinionated than anything you'll find in a newsletter.</div>
+      <div class="blog-card-footer">
+        <span class="blog-card-author">Loveneesh Dhir</span>
+        <span class="blog-card-read">Read → </span>
+      </div>
+    </a>
+
+    <!-- Post 3 -->
+    <a href="/blog/llms-to-gtm-india-ai-leaders.html" class="blog-card">
+      <div class="blog-card-meta">
+        <span class="blog-card-date">March 5, 2026</span>
+        <span class="blog-card-tag">Strategy</span>
+      </div>
+      <img src="blog-img-3.png" alt="From LLMs to GTM: What India's AI Leaders Are Actually Talking About in 2026" class="blog-card-img" loading="lazy">
+      <div class="blog-card-title">From LLMs to GTM: What India's AI Leaders Are Actually Talking About in 2026</div>
+      <div class="blog-card-excerpt">The gap between India's AI builders and its AI business leaders is closing fast. Here's what's on the mind of CTOs, founders and practitioners when the cameras are off and the real conversations start.</div>
+      <div class="blog-card-footer">
+        <span class="blog-card-author">Loveneesh Dhir</span>
+        <span class="blog-card-read">Read → </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer id="join">
+  <div class="footer-left">
+    <div class="logo">AI <span>CABAL</span></div>
+    <p>The bar is high. The room is worth it.</p>
+    <div class="social-links">
+      <a href="https://x.com/theaicabal" target="_blank" rel="noopener noreferrer" class="twitter-link" aria-label="Follow AI Cabal on X">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @theaicabal
+      </a>
+      <a href="https://instagram.com/theaicabal" target="_blank" rel="noopener noreferrer" class="twitter-link" aria-label="Follow AI Cabal on Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @theaicabal
+      </a>
+    </div>
+  </div>
+  <div class="footer-middle">
+    <div class="dispatch-label">Subscribe to the</div>
+    <div class="dispatch-title">CABAL DISPATCH</div>
+    <p class="dispatch-sub">The signal. In your inbox. No noise.</p>
+    <div class="subscribe-row">
+      <a href="https://aicabal.substack.com/subscribe" class="btn-primary">Subscribe Now →</a>
+    </div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-cta">FIND YOUR<br><span class="accent">CABAL.</span></div>
+    <a href="/#join" class="btn-primary">Join Now →</a>
+  </div>
+</footer>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.width='16px'; cursor.style.height='16px'; ring.style.width='52px'; ring.style.height='52px'; ring.style.borderColor='rgba(200,240,60,0.8)'; });
+    el.addEventListener('mouseleave', () => { cursor.style.width='10px'; cursor.style.height='10px'; ring.style.width='36px'; ring.style.height='36px'; ring.style.borderColor='rgba(200,240,60,0.4)'; });
+  });
+  window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40); });
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => { entries.forEach((e,i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80); }); }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
