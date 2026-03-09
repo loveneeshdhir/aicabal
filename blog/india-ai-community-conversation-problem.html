@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="/aicabal_favicon_dark.png">
+<link rel="apple-touch-icon" href="/aicabal_pfp_400_square_dark.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why India's AI Community Has a Conversation Problem — AI Cabal</title>
+<meta name="description" content="India has no shortage of AI talent. What it lacks is a room where that talent actually talks honestly, deeply, without the performance. Here's why that gap exists and what we're building to close it.">
+<meta name="author" content="Loveneesh Dhir">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="geo.region" content="IN">
+<link rel="canonical" href="https://aicabal.xyz/blog/india-ai-community-conversation-problem.html">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AI Cabal">
+<meta property="og:title" content="Why India's AI Community Has a Conversation Problem (And How We're Fixing It)">
+<meta property="og:description" content="India has no shortage of AI talent. What it lacks is a room where that talent actually talks honestly, deeply, without the performance.">
+<meta property="og:url" content="https://aicabal.xyz/blog/india-ai-community-conversation-problem.html">
+<meta property="og:image" content="https://aicabal.xyz/blog-img-1.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta property="article:published_time" content="2026-02-15T09:00:00+05:30">
+<meta property="article:author" content="Loveneesh Dhir">
+<meta property="article:tag" content="AI community India">
+<meta property="article:tag" content="AI network India">
+<meta property="article:tag" content="AI builders India">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@theaicabal">
+<meta name="twitter:creator" content="@theaicabal">
+<meta name="twitter:title" content="Why India's AI Community Has a Conversation Problem">
+<meta name="twitter:description" content="India has no shortage of AI talent. What it lacks is a room where that talent actually talks to each other.">
+<meta name="twitter:image" content="https://aicabal.xyz/blog-img-1.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why India's AI Community Has a Conversation Problem (And How We're Fixing It)",
+  "description": "India has no shortage of AI talent. What it lacks is a room where that talent actually talks honestly, deeply, without the performance.",
+  "image": "https://aicabal.xyz/blog-img-1.png",
+  "datePublished": "2026-02-15T09:00:00+05:30",
+  "dateModified": "2026-02-15T09:00:00+05:30",
+  "author": {
+    "@type": "Person",
+    "name": "Loveneesh Dhir"
+  },
+  "publisher": { "@id": "https://aicabal.xyz/#organization" },
+  "mainEntityOfPage": "https://aicabal.xyz/blog/india-ai-community-conversation-problem.html",
+  "keywords": ["AI community India", "AI network India", "AI builders India", "AI conversation India"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #080808; --off-black: #0e0e0e; --dark: #141414;
+    --border: #222; --muted: #666; --dim: #a0a0a0;
+    --text: #d4d0c8; --white: #f0ece0;
+    --accent: #c8f03c; --accent-dim: #a8cc28; --red: #e84040;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; cursor: none; overflow-x: hidden; }
+  .accent { color: var(--accent); }
+  .cursor { width:10px;height:10px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.2s,height 0.2s; }
+  .cursor-ring { width:36px;height:36px;border:1px solid rgba(200,240,60,0.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.15s ease,width 0.3s,height 0.3s,border-color 0.3s; }
+  body::before { content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9990;opacity:0.6; }
+
+  nav { position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s; }
+  nav.scrolled { background:rgba(8,8,8,0.92);border-color:var(--border);backdrop-filter:blur(12px); }
+  .nav-logo { font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.12em;color:var(--white);text-decoration:none; }
+  .nav-logo span { color:var(--accent); }
+  .nav-links { display:flex;gap:36px;list-style:none;align-items:center; }
+  .nav-links a { font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+
+  /* POST LAYOUT */
+  .post-hero {
+    padding: 140px 48px 64px;
+    border-bottom: 1px solid var(--border);
+    
+  }
+  .post-back {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    transition: color 0.2s;
+  }
+  .post-back:hover { color: var(--accent); }
+  .post-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(200,240,60,0.3);
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  .post-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.0;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta-sep { color: var(--border); }
+
+  .post-hero-img{width:100%;max-width:860px;height:400px;object-fit:cover;display:block;margin:0 auto;border:1px solid var(--border);}
+
+  .post-body-wrap { display: block; padding: 0 48px; }
+
+  .post-body {
+    padding: 64px 80px 120px 0;
+    
+  }
+
+  .post-body p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  .post-body h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin: 48px 0 20px;
+  }
+
+  .post-body h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 36px 0 16px;
+  }
+
+  .post-body blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 16px 24px;
+    margin: 36px 0;
+    background: var(--off-black);
+  }
+  .post-body blockquote p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--white);
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  .post-body ul {
+    list-style: none;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .post-body ul li {
+    font-size: 17px;
+    color: var(--text);
+    line-height: 1.7;
+    padding-left: 20px;
+    position: relative;
+  }
+  .post-body ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 14px;
+  }
+
+  .post-sidebar {
+    padding: 64px 0 64px 48px;
+  }
+  .sidebar-author {
+    margin-bottom: 48px;
+  }
+  .sidebar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .sidebar-author-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .sidebar-author-bio {
+    font-size: 13px;
+    color: var(--dim);
+    line-height: 1.65;
+  }
+  .sidebar-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
+  }
+  .sidebar-related-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .sidebar-post {
+    display: block;
+    text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-post:first-of-type { border-top: 1px solid var(--border); }
+  .sidebar-post-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .sidebar-post-title {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.5;
+    transition: color 0.2s;
+  }
+  .sidebar-post:hover .sidebar-post-title { color: var(--accent); }
+
+  .post-footer-nav {
+    padding: 48px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post-footer-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  .post-footer-nav a:hover { color: var(--accent); }
+
+  .btn-primary { background:var(--accent);color:var(--black);font-family:'DM Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:16px 32px;border:none;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px)); }
+  .btn-primary:hover { background:#d8ff44;transform:translateY(-2px); }
+
+  footer { padding:80px 48px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:0;align-items:center; }
+  .footer-left .social-links { display:flex;flex-direction:column;gap:10px; }
+  .footer-left .logo { font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.1em;color:var(--white);margin-bottom:8px; }
+  .footer-left .logo span { color:var(--accent); }
+  .footer-left p { font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:0.1em;margin-bottom:16px; }
+  .twitter-link { display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--dim);text-decoration:none;transition:color 0.2s; }
+  .twitter-link:hover { color:var(--accent); }
+  .footer-middle { text-align:center;border-left:1px solid var(--border);padding:0 64px; }
+  .dispatch-label { font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--muted);margin-bottom:4px; }
+  .dispatch-title { font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:0.08em;color:var(--white);margin-bottom:6px; }
+  .dispatch-sub { font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:20px; }
+  .subscribe-row { display:flex;justify-content:center; }
+  .footer-right { text-align:right; }
+  .footer-right .footer-cta { font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);color:var(--white);line-height:1.1;margin-bottom:16px; }
+  .footer-right .footer-cta .accent { color:var(--accent); }
+
+  @media (max-width: 768px) {
+    nav { padding:20px 24px; } .nav-links { display:none; }
+    .post-hero { padding:120px 24px 48px; }
+    .post-hero-img{width:100%;max-width:860px;height:400px;object-fit:cover;display:block;margin:0 auto;border:1px solid var(--border);}
+    .post-body-wrap { display: block; padding: 0 48px; }
+    .post-body { padding:48px 0; border-right:none; border-bottom:1px solid var(--border); }
+    .post-sidebar { padding:48px 0; }
+    .post-footer-nav { padding:32px 24px; flex-direction:column; gap:16px; }
+    footer { grid-template-columns:1fr;gap:48px;padding:60px 24px;text-align:center; }
+    .footer-middle { border:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 0; }
+    .footer-right { text-align:center; }
+  }
+
+  .author-byline { display:flex; align-items:center; gap:12px; margin-top:24px; }
+  .author-byline img { width:40px; height:40px; border-radius:50%; object-fit:cover; border:1px solid var(--border); flex-shrink:0; }
+  .author-byline-text { display:flex; flex-direction:column; gap:2px; }
+  .author-byline-name { font-family:'DM Sans',sans-serif; font-size:14px; font-weight:500; color:var(--white); }
+  .author-byline-role { font-family:'DM Mono',monospace; font-size:11px; color:var(--dim); }
+  .author-byline-meta { font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo">AI <span>CABAL</span></a>
+  <ul class="nav-links">
+    <li><a href="/#what">What is it</a></li>
+    <li><a href="/#inside">Inside</a></li>
+    <li><a href="/#who">Who gets in</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
+
+<div class="post-hero">
+  <a href="/blog" class="post-back">← All Posts</a>
+  <div class="post-tag">Community</div>
+  <h1>Why India's AI Community Has a Conversation Problem (And How We're Fixing It)</h1>
+  <div class="author-byline">
+    <img src="images/loveneeshdhir.png" alt="Loveneesh Dhir">
+    <div class="author-byline-text">
+      <span class="author-byline-name">Loveneesh Dhir</span>
+      <span class="author-byline-role">Building AI Cabal</span>
+      <span class="author-byline-meta">February 15, 2026 &nbsp;·&nbsp; 6 min read</span>
+    </div>
+  </div>
+</div>
+
+<img src="images/blog-img-1.png" alt="Why India's AI Community Has a Conversation Problem" class="post-hero-img" loading="lazy">
+
+<div class="post-body-wrap">
+  <article class="post-body">
+
+    <p>India has some of the sharpest AI talent in the world. Our engineers are running production LLM systems at companies across the globe. Our founders are laying infrastructure that will underpin the next decade of AI products. Our researchers are publishing work that actually shifts things.</p>
+
+    <p>But ask most of them the same question over a beer and you'll hear the same answer. They feel intellectually alone. Not for lack of colleagues or collaborators. The spaces that exist for the Indian AI community, the groups, the events, the Discords, are built for everything except actual conversation.</p>
+
+    <h2>The Performance Problem</h2>
+
+    <p>Most AI communities have quietly become performance spaces. People show up to be seen, not to think. Wins get shared. Uncertainties don't. Announcements go up. Real questions don't. The currency is visibility, not understanding.</p>
+
+    <p>This is a structural problem, not a character one. When your community lives on a platform that rewards engagement, when your audience is also your professional network, when every post doubles as a signal to future employers and investors, you perform. Of course you do.</p>
+
+    <blockquote><p>"The internet has infinite AI content. It has almost no AI conversation."</p></blockquote>
+
+    <p>That gap matters more than it looks. Content gets produced. Conversation gets discovered. You can watch content alone. You have to actually be in a conversation.</p>
+
+    <h2>What Actually Moves Thinking Forward</h2>
+
+    <p>Think back to the moments where your thinking on AI really shifted. Where you changed your mind on something you were sure about. Where a problem you'd been grinding on suddenly cracked open.</p>
+
+    <p>Almost none of those moments came from a tutorial or a newsletter. They came from being in a room, physical or digital, with someone who knew something you didn't, who pushed back hard enough that you had to actually reconsider. That friction is rare. Most spaces are designed to avoid it.</p>
+
+    <p>India's AI ecosystem has no shortage of people capable of creating those moments. What it doesn't have is the right structure to make them happen consistently.</p>
+
+    <h3>What we've seen</h3>
+
+    <ul>
+      <li>The best conversations often happen in smaller, focused groups rather than sprawling communities</li>
+      <li>Cross-functional perspectives, an ML engineer and a GTM lead in the same room, tend to surface sharper insight than homogeneous ones</li>
+      <li>People share real problems in spaces where they feel comfortable with the room, not just the platform</li>
+      <li>At scale, signal-to-noise becomes harder to manage without intentional curation</li>
+    </ul>
+
+    <h2>The Best Communities Are Really Just Matchmakers</h2>
+
+    <p>Think about the most useful professional relationship you have. Chances are it didn't come from a conference badge or a LinkedIn request. It came from being in the right room at the right time, with someone who was working on the same problems from a different angle.</p>
+
+    <p>That's the thing about connection. It's rarely about volume. It's about fit.</p>
+
+    <p>Most professional communities are built around audiences, not relationships. They optimise for reach, more members, more posts, more activity. And that's not wrong, exactly. But it means the actual work of connecting people often gets left to chance. You join, you scroll, you maybe reply to something. Whether you meet anyone useful depends on luck more than design.</p>
+
+    <p>What if a community's primary job was to reduce that luck? Not by curating who gets in, but by being intentional about what happens once you're there. By creating the conditions where an ML engineer and a product leader end up in the same conversation and both walk away with something they couldn't have found on their own.</p>
+
+    <h2>What We're Building</h2>
+
+    <p>AI Cabal starts from a different question. Not how do we get the most people in the room, but how do we make the room worth being in.</p>
+
+    <p>That means being intentional about who's there. Not based on title or company or follower count, but on whether you're doing the work, thinking hard about it, and genuinely contributing more than you take out.</p>
+
+    <p>It means cross-functional by design. The most interesting AI problems right now sit at the intersection of engineering and strategy, product and infrastructure, research and GTM. A community of only engineers or only leaders is a community that's only seeing part of the problem.</p>
+
+    <p>It means a room that stays open, where the conversation keeps going, where people work through the same problem from different angles and both walk away sharper.</p>
+
+    <p>And eventually in person, across eight cities, Delhi to Chennai, Bengaluru to Kolkata. Some conversations only happen when you're actually in the same room.</p>
+
+    <h2>Why Now</h2>
+
+    <p>The window for this is real and it won't stay open forever. India's AI ecosystem is in the middle of a serious transition. The people who spent the last five years building foundations are now making decisions that actually matter, what to build, how to deploy, how to lead teams through the biggest shift in how software gets made.</p>
+
+    <p>The quality of those decisions depends on the quality of the conversations happening right now. And right now, most of those conversations are either not happening at all, or happening in rooms too small, too siloed, or too performative to produce anything useful.</p>
+
+    <p>That's the gap. That's what AI Cabal is here to close.</p>
+
+    <p>If you're in the trenches with AI, building, deploying, leading, or just thinking seriously about it, you belong here.</p>
+
+
+<div class="post-cta-banner">
+  <div class="post-cta-inner">
+    <div class="post-cta-label">// Want in?</div>
+    <div class="post-cta-heading">Supercharge your AI journey with us.</div>
+    <p class="post-cta-sub">Partner with AI Cabal to reach India's most serious builders, engineers and leaders across 8 cities. Sponsorships, events and community programs now open.</p>
+    <a href="https://tally.so/r/7RDN6L" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Partner with AI Cabal">Partner With Us →</a>
+  </div>
+</div>
+
+  </article>
+
+  
+</div>
+
+<div class="post-footer-nav">
+  <a href="/blog">← Back to Blog</a>
+  <a href="/blog/ai-stack-india-builders-debate.html">Next Post →</a>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <div class="logo">AI <span>CABAL</span></div>
+    <p>The bar is high. The room is worth it.</p>
+    <div class="social-links">
+      <a href="https://x.com/theaicabal" target="_blank" rel="noopener noreferrer" class="twitter-link" aria-label="Follow AI Cabal on X">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @theaicabal
+      </a>
+      <a href="https://instagram.com/theaicabal" target="_blank" rel="noopener noreferrer" class="twitter-link" aria-label="Follow AI Cabal on Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @theaicabal
+      </a>
+    </div>
+  </div>
+  <div class="footer-middle">
+    <div class="dispatch-label">Subscribe to the</div>
+    <div class="dispatch-title">CABAL DISPATCH</div>
+    <p class="dispatch-sub">The signal. In your inbox. No noise.</p>
+    <div class="subscribe-row"><a href="https://aicabal.substack.com/subscribe" class="btn-primary">Subscribe Now →</a></div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-cta">FIND YOUR<br><span class="accent">CABAL.</span></div>
+    <a href="/#join" class="btn-primary">Join Now →</a>
+  </div>
+</footer>
+
+<script>
+  const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  function animateCursor(){cursor.style.left=mx+'px';cursor.style.top=my+'px';rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateCursor);}
+  animateCursor();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='52px';ring.style.height='52px';ring.style.borderColor='rgba(200,240,60,0.8)';});
+    el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';ring.style.borderColor='rgba(200,240,60,0.4)';});
+  });
+  window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40);});
+</script>
+</body>
+</html>
