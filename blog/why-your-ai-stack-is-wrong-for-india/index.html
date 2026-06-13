@@ -5,54 +5,52 @@
 <link rel="apple-touch-icon" href="/aicabal_pfp_400_square_dark.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The AI Stack Every Indian Builder Is Debating Right Now — AI Cabal</title>
-<meta name="description" content="From model choice to RAG architecture to agent frameworks: the conversations inside India's best AI teams right now.are sharper, messier and more opinionated than anything you'll find in a newsletter.">
+<title>Why Your AI Stack Is Probably Wrong for India — AI Cabal</title>
+<meta name="description" content="You're building for San Francisco constraints when you should be building for Delhi market reality. Here's where most teams get it backwards.">
 <meta name="author" content="Loveneesh Dhir">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="geo.region" content="IN">
-<link rel="canonical" href="https://aicabal.xyz/blog/ai-stack-india-builders-debate.html">
+<link rel="canonical" href="https://aicabal.xyz/blog/ai-stack-india-market.html">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AI Cabal">
-<meta property="og:title" content="The AI Stack Every Indian Builder Is Debating Right Now">
-<meta property="og:description" content="From model choice to RAG architecture to agent frameworks: the real conversations inside India's best AI teams.">
-<meta property="og:url" content="https://aicabal.xyz/blog/ai-stack-india-builders-debate.html">
-<meta property="og:image" content="https://aicabal.xyz/blog-img-2.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:title" content="Why Your AI Stack Is Probably Wrong for India">
+<meta property="og:description" content="You're building for San Francisco constraints when you should be building for Delhi market reality.">
+<meta property="og:url" content="https://aicabal.xyz/blog/ai-stack-india-market.html">
+<meta property="og:image" content="https://aicabal.xyz/blog-img-5.png">
 <meta property="og:locale" content="en_IN">
-<meta property="article:published_time" content="2026-02-24T09:00:00+05:30">
+<meta property="article:published_time" content="2026-02-21T10:15:00+05:30">
 <meta property="article:author" content="Loveneesh Dhir">
-<meta property="article:tag" content="AI tools India">
-<meta property="article:tag" content="LLM stack India">
-<meta property="article:tag" content="generative AI India">
+<meta property="article:tag" content="AI infrastructure India">
+<meta property="article:tag" content="tech stack">
+<meta property="article:tag" content="India market">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@theaicabal">
-<meta name="twitter:title" content="The AI Stack Every Indian Builder Is Debating Right Now">
-<meta name="twitter:description" content="From model choice to RAG to agents: the real stack debates happening inside India's best AI teams.">
-<meta name="twitter:image" content="https://aicabal.xyz/blog-img-2.png">
+<meta name="twitter:title" content="Why Your AI Stack Is Probably Wrong for India">
+<meta name="twitter:description" content="Optimizing for the wrong constraints kills more startups than bad product ideas.">
+<meta name="twitter:image" content="https://aicabal.xyz/blog-img-5.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "The AI Stack Every Indian Builder Is Debating Right Now",
-  "description": "From model choice to RAG architecture to agent frameworks: the conversations inside India's best AI teams right now.",
-  "image": "https://aicabal.xyz/blog-img-2.png",
-  "datePublished": "2026-02-24T09:00:00+05:30",
-  "dateModified": "2026-02-24T09:00:00+05:30",
+  "headline": "Why Your AI Stack Is Probably Wrong for India",
+  "description": "You're building for San Francisco constraints when you should be building for Delhi market reality.",
+  "image": "https://aicabal.xyz/blog-img-5.png",
+  "datePublished": "2026-02-21T10:15:00+05:30",
+  "dateModified": "2026-02-21T10:15:00+05:30",
   "author": { "@type": "Person", "name": "Loveneesh Dhir" },
   "publisher": { "@id": "https://aicabal.xyz/#organization" },
-  "mainEntityOfPage": "https://aicabal.xyz/blog/ai-stack-india-builders-debate.html",
-  "keywords": ["AI tools India", "LLM stack India", "generative AI India", "AI infrastructure India", "RAG India", "AI agents India"]
+  "mainEntityOfPage": "https://aicabal.xyz/blog/ai-stack-india-market.html",
+  "keywords": ["AI stack India", "tech infrastructure", "India market", "startup tech decisions"]
 }
 </script>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
-  :root { --black:#080808;--off-black:#0e0e0e;--dark:#141414;--border:#222;--muted:#666;--dim:#a0a0a0;--text:#d4d0c8;--white:#f0ece0;--accent:#c8f03c;--accent-dim:#a8cc28;--red:#e84040; }
+  :root{--black:#080808;--off-black:#0e0e0e;--dark:#141414;--border:#222;--muted:#666;--dim:#a0a0a0;--text:#d4d0c8;--white:#f0ece0;--accent:#c8f03c;--accent-dim:#a8cc28;--red:#e84040;}
   *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
   body{background:var(--black);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;cursor:none;overflow-x:hidden;}
   .accent{color:var(--accent);}
@@ -131,6 +129,12 @@
 
   .nav-join-btn { background:var(--accent) !important; color:var(--black) !important; padding:8px 18px; clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px)); transition:background 0.2s !important; }
   .nav-join-btn:hover { background:#d8ff44 !important; color:var(--black) !important; }
+
+  .post-cta-banner{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 32px;margin:64px 0;text-align:center;}
+  .post-cta-inner{max-width:700px;margin:0 auto;}
+  .post-cta-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+  .post-cta-heading{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.03em;color:var(--white);margin-bottom:12px;}
+  .post-cta-sub{font-size:15px;color:var(--dim);margin-bottom:24px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -150,128 +154,123 @@
 
 <div class="post-hero">
   <a href="/blog" class="post-back">← All Posts</a>
-  <div class="post-tag">Engineering</div>
-  <h1>The AI Stack Every Indian Builder Is Debating Right Now</h1>
+  <div class="post-tag">Infrastructure</div>
+  <h1>Why Your AI Stack Is Probably Wrong for India</h1>
   <div class="author-byline">
     <img src="/blog/images/loveneeshdhir.png" alt="Loveneesh Dhir">
     <div class="author-byline-text">
       <span class="author-byline-name">Loveneesh Dhir</span>
       <span class="author-byline-role">Building AI Cabal</span>
-      <span class="author-byline-meta">February 24, 2026 &nbsp;·&nbsp; 7 min read</span>
+      <span class="author-byline-meta">February 21, 2026 &nbsp;·&nbsp; 9 min read</span>
     </div>
   </div>
 </div>
-
-<img src="/blog/images/blog-img-2.png" alt="The AI Stack Every Indian Builder Is Debating Right Now" class="post-hero-img" loading="lazy">
 
 <div class="post-body-wrap">
   <article class="post-body">
 
-    <p>Ask ten senior AI engineers at Indian product companies what stack they're running and you'll get eleven different opinions and a twenty-minute argument. Good. That means the field is actually moving.</p>
+    <p>We've watched this happen with every major tech wave. Founders in India copy the stack that works in San Francisco and then get confused when it doesn't work at their scale. They're optimizing for the wrong constraints.</p>
 
-    <p>The debates inside India's best AI teams right now are sharper and more opinionated than anything you'll find in a vendor blog or a conference talk. This is an attempt to lay out the live ones: the questions without clean answers yet, where genuinely smart people are landing in different places.</p>
+    <p>The AI stack that makes sense for a Series A startup in Mountain View does not make sense for a team of 3-5 engineers in Delhi building for the Indian market. Not because there's something wrong with you or your team. Because the problem is literally different.</p>
 
-    <h2>Build vs Buy vs Fine-tune</h2>
+    <p>Let's be specific about where most teams go wrong.</p>
 
-    <p>Everyone assumed this question would be settled by now. It isn't.</p>
+    <h2>You're Optimizing for Developer Experience When You Should Be Optimizing for Cost</h2>
 
-    <p>The "just use the API" camp is still strong for good reason. Frontier model capabilities are moving fast enough that two months of fine-tuning work often gets leapfrogged by the next API release. The ROI math is genuinely hard to justify in a lot of cases.</p>
+    <p>This is the biggest one. The default AI stack in San Francisco right now is: use managed services, pay the API costs, keep your team small and focused. Your bottleneck is good engineers. Cost is noise.</p>
 
-    <p>But the "we need to own the model" camp has better arguments than it did a year ago:</p>
+    <p>In the Indian context, especially if you're selling into the Indian market, that math flips. Your bottleneck is unit economics. Cost per inference, cost per transaction, cost per user. If you're building something for tier 2-3 cities, per-user willingness to pay is low. You don't have the luxury of treating infrastructure costs as noise.</p>
+
+    <p>That means your stack should look different. You probably want to run models locally rather than call APIs. You want to understand your inference costs at a per-token level. You want to optimize for bandwidth efficiency because many of your users are on 3G networks.</p>
+
+    <blockquote><p>"The best stack is the one that lets you ship with the margins you need. If that means more ops work and less convenience, that's the tradeoff you make."</p></blockquote>
+
+    <p>Most teams never make this tradeoff conscious. They inherit the San Francisco stack and then get upset that their economics don't work.</p>
+
+    <h2>You're Picking Tools Based on Hype, Not Based on Your Actual Problem</h2>
+
+    <p>This one is straightforward but it kills teams. There are a lot of new AI tools shipped every week. Every founder wants to be using the newest, most sophisticated thing. Partly because it's cool. Partly because it looks good in investor conversations.</p>
+
+    <p>The teams that win are using tools that solve their actual problem, not tools that have the best marketing or the most GitHub stars. This might mean using older tools. It might mean using boring tools. It might mean not using the trendy solution everyone is talking about.</p>
+
+    <p>Evaluate based on:</p>
 
     <ul>
-      <li>Latency and cost at production scale make frontier APIs painful for high-volume applications</li>
-      <li>Data residency requirements are a real constraint for enterprise AI in India, not a theoretical one</li>
-      <li>Fine-tuning smaller models on narrow, well-defined tasks is working better than most people expected</li>
-      <li>The quality gap between open-source and frontier models has closed a lot</li>
+      <li>Does this solve the specific constraint I'm facing right now? Not the constraint I might face in 6 months. Right now.</li>
+      <li>Can I understand how this tool works if something goes wrong? If the answer is no, be very careful about depending on it.</li>
+      <li>What's the switching cost if I need to move away from this tool? If it's high, you're less free to experiment.</li>
+      <li>Is the community around this tool healthy enough that I can find help when I need it? For Indian builders, this matters more than you think.</li>
     </ul>
+
+    <h2>You're Not Building for the Actual Constraints of Your Users</h2>
+
+    <p>Here's where the real gap opens up. You're building an AI product for users in India. Your users are on varied network conditions. Some of them are on 4G in tier 1 cities. Some of them are on 2G in tier 3 cities. Your product needs to work across that entire range.</p>
+
+    <p>If your AI stack is built assuming low-latency, high-bandwidth connections, it's not going to work for your actual market. You need to be thinking about local inference. You need to be thinking about small models. You need to be thinking about offline capability.</p>
+
+    <p>This is genuinely different from building for the San Francisco market, where you can assume broadband and low latency.</p>
 
     <div class="debate-box">
-      <div class="debate-box-label">The live debate</div>
-      <p><strong>Camp A:</strong> Fine-tuning is a trap. You're optimising for yesterday's ceiling. <strong>Camp B:</strong> Prompt engineering your way to production reliability at scale is a fantasy. At some point you have to own what you ship.</p>
+      <div class="debate-box-label">The infrastructure question</div>
+      <p><strong>The most successful AI products being built in India right now are the ones that treat network constraints as a first-class problem, not an afterthought.</strong> They build offline-first. They optimize for low bandwidth. They design the product knowing that the connection might drop mid-inference.</p>
     </div>
 
-    <p>The honest answer nobody says out loud is that it depends on your use case, your team's actual ML depth, the quality of your data, and how stable your requirements are over the next year. The people worth listening to on this are the ones who've shipped both and can tell you specifically where each one broke.</p>
+    <h2>You're Not Accounting for Data Residency and Regulatory Concerns</h2>
 
-    <h2>RAG: Simple vs Sophisticated</h2>
+    <p>In some verticals, this is theoretical. In others, it's a deal blocker. If you're building something for fintech, healthcare, or any regulated industry, your data residency story matters. A lot of Indian customers are rightfully cautious about sending data to US servers, whether it's technically legal or not.</p>
 
-    <p>RAG went from exciting research concept to production standard to overengineered mess in about eighteen months. Classic AI build cycle.</p>
+    <p>This is another constraint that pushes you toward local inference, toward on-premise deployment, toward infrastructure that gives you control.</p>
 
-    <p>The basic pipeline: chunk documents, embed them, retrieve relevant chunks at query time, put them in context. It works. Works well enough that most teams built it, shipped it, and called it done. Then they hit production and found out that "works" and "works reliably with real user queries at scale" are very different things.</p>
+    <p>The stack that works here is different from the stack where data leaving your servers is not a concern.</p>
 
-    <h3>What teams are actually arguing about</h3>
+    <h2>You're Thinking Too Vertically</h2>
 
-    <ul>
-      <li><strong style="color:var(--white)">Chunking strategy:</strong> fixed-size vs semantic vs hierarchical. Sounds boring. Produces massive quality differences in practice.</li>
-      <li><strong style="color:var(--white)">Hybrid search:</strong> dense retrieval alone misses lexical matches that sparse search catches. Most teams are running hybrid now but the weighting is still largely tribal knowledge.</li>
-      <li><strong style="color:var(--white)">Re-ranking:</strong> cross-encoder re-ranking after initial retrieval helps quality a lot. It also adds latency. Where do you draw the line?</li>
-      <li><strong style="color:var(--white)">Agentic RAG:</strong> letting the model decide what to retrieve instead of a fixed pipeline. More capable, much harder to debug and control.</li>
-    </ul>
+    <p>Most teams new to AI think they need a full AI platform. Orchestration. Evaluation. Monitoring. Experimentation tools. All of it. Day one.</p>
 
-    <blockquote><p>"Simple RAG is easy to build and hard to make good. Complex RAG is hard to build and hard to debug. Pick your suffering."</p></blockquote>
+    <p>What you actually need day one is: a way to run inference and get results. That's it. Everything else is nice to have. Build the vertical stack as you grow and as specific problems become actual problems, not speculative ones.</p>
 
-    <p>The teams shipping the best RAG in India right now share one thing: they've put serious work into evaluation infrastructure. They know exactly what their system gets wrong, how often, and why. That feedback loop is what separates production-grade from demo-grade. The architecture choices matter less than most people think.</p>
-
-    <h2>The Agent Question</h2>
-
-    <p>The agent debate is the loudest one in the Indian AI builder community right now, and part of why it's so noisy is that the term means completely different things to different people.</p>
-
-    <p>For some teams it's a ReAct loop where a model reasons and uses tools. For others it's multi-agent orchestration with specialised sub-agents. For others it's a marketing label on a function-calling wrapper.</p>
-
-    <p>The questions that actually matter:</p>
+    <p>The teams that get this right ship faster because they're not fighting infrastructure. They have fewer dependencies that can break. When they need to scale or add capability, they do it in response to actual constraints, not in response to imagined future needs.</p>
 
     <ul>
-      <li>When does an agentic setup add real value versus just adding failure modes and latency?</li>
-      <li>How do you evaluate agent behaviour at scale when outputs are non-deterministic?</li>
-      <li>What's the right amount of human-in-the-loop for your specific risk profile?</li>
-      <li>Which orchestration framework, if any, is actually worth the abstraction cost?</li>
+      <li>Start with a single model. Run it. Get it working. Measure what actually happens.</li>
+      <li>Only when you need evaluation, add it. Only when you need monitoring, add it.</li>
+      <li>Build with the assumption that you'll replace parts of this stack as you learn more.</li>
     </ul>
 
-    <div class="debate-box">
-      <div class="debate-box-label">The thing nobody wants to say</div>
-      <p>Most "agent" systems in production are not actually agentic in any real sense. They're deterministic pipelines with LLM steps dressed up with agent vocabulary. <strong>And that's fine.</strong> A reliable pipeline that does one thing well will beat a flaky agent trying to do everything, every time.</p>
+    <h2>You're Not Thinking About Fallback and Failure Modes</h2>
+
+    <p>If your AI stack requires everything to work perfectly, it's not a stack built for India. Networks drop. Models fail. API calls timeout. Your product needs to have a path forward when things go wrong.</p>
+
+    <p>This means designing with fallbacks. If the AI inference fails, what's the graceful degradation? Can the product still work, even if it works less well? If you can't answer that, your stack isn't robust enough for your market.</p>
+
+    <p>The teams thinking about this from day one don't have to do expensive refactoring later when they discover in production that their stack doesn't handle reality very well.</p>
+
+    <h2>What Your Stack Should Actually Look Like</h2>
+
+    <p>If you're building an AI product for India, here's what the stack probably looks like in 2026:</p>
+
+    <ul>
+      <li>A model you understand well enough to debug. Probably open source. Probably something you can run locally.</li>
+      <li>A clean interface between your product and the model. Make it easy to swap the model out.</li>
+      <li>Monitoring that tells you what's actually happening in production. Not the fanciest tools. The right tools for your constraints.</li>
+      <li>A strategy for when the AI doesn't work. What's the fallback? What's the user experience? Who gets notified?</li>
+      <li>Infrastructure that respects data residency and network constraints. Not a stretch goal. Part of the initial design.</li>
+    </ul>
+
+    <p>This might look boring compared to the latest thing everyone's using. It's supposed to. It's designed to work, not to look impressive.</p>
+
+    <p>The founders who are shipping the most interesting AI products in India right now are the ones who made this choice consciously. They built for their constraints, not for San Francisco constraints. And that difference, in a market where unit economics matter and infrastructure stability matters, is everything.</p>
+
+    <div class="post-cta-banner">
+      <div class="post-cta-inner">
+        <div class="post-cta-label">// Want in?</div>
+        <div class="post-cta-heading">Supercharge your AI journey with us.</div>
+        <p class="post-cta-sub">Partner with AI Cabal to reach India's most serious builders, engineers and leaders across 8 cities. Sponsorships, events and community programs now open.</p>
+        <a href="https://tally.so/r/7RDN6L" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Partner with AI Cabal">Partner With Us →</a>
+      </div>
     </div>
-
-    <h2>Observability: The Unglamorous Problem That Kills Products</h2>
-
-    <p>The most underrated debate in the Indian AI builder community has nothing to do with models or architectures. It's about observability.</p>
-
-    <p>Traditional software observability (metrics, logs, traces) is necessary but nowhere near sufficient for AI systems. You can have perfect infrastructure monitoring and still have no idea why your LLM app is producing bad outputs for 8% of queries.</p>
-
-    <p>The teams that have shipped AI to production and kept it alive all have some version of the same practices:</p>
-
-    <ul>
-      <li>Log inputs, outputs, and intermediate steps for every request. Not sampled. Every request.</li>
-      <li>Build eval datasets from real failure cases, not synthetic benchmarks</li>
-      <li>Track output quality metrics over time alongside infrastructure metrics</li>
-      <li>Set up human review for the edge cases automated eval misses</li>
-    </ul>
-
-    <p>Nobody gets excited about this work. There's no interesting architecture to show off. It's just engineering discipline applied to a non-deterministic system. And it's what separates a demo that impresses a conference from a product that users actually trust.</p>
-
-    <h2>The Indian Context</h2>
-
-    <p>The cost constraint runs through all of these debates in the Indian context. By necessity, India's AI builders are more cost-conscious than teams at well-funded US startups. That constraint is producing real engineering creativity.</p>
-
-    <p>The teams doing the most interesting work on inference optimisation, on smaller fine-tuned models, on caching strategies that cut API costs by 60 to 70 percent: a lot of them are Indian teams who couldn't afford to build the expensive way and had to find the smarter way instead.</p>
-
-    <p>That's not a handicap. It's a forcing function that produces leaner, more defensible systems. The Indian AI stack coming out of this period is going to look different from the American one. More cost-opinionated, more pragmatic, and probably more resilient for it.</p>
-
-    <p>These are the conversations happening inside the Cabal. If you're deep in any of this, you should be in the room.</p>
-
-
-<div class="post-cta-banner">
-  <div class="post-cta-inner">
-    <div class="post-cta-label">// Want in?</div>
-    <div class="post-cta-heading">Supercharge your AI journey with us.</div>
-    <p class="post-cta-sub">Partner with AI Cabal to reach India's most serious builders, engineers and leaders across 8 cities. Sponsorships, events and community programs now open.</p>
-    <a href="https://tally.so/r/7RDN6L" class="btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Partner with AI Cabal">Partner With Us →</a>
-  </div>
-</div>
 
   </article>
-
-  
 </div>
 
 <footer>
