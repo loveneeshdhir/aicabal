@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="aicabal_favicon_dark.png">
-<link rel="apple-touch-icon" href="aicabal_pfp_400_square_dark.png">
+<link rel="icon" type="image/png" href="/aicabal_favicon_dark.png">
+<link rel="apple-touch-icon" href="/aicabal_pfp_400_square_dark.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — AI Cabal | Perspectives on AI in India</title>
@@ -10,7 +10,7 @@
 <meta name="author" content="AI Cabal">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="geo.region" content="IN">
-<link rel="canonical" href="https://aicabal.xyz/blog">
+<link rel="canonical" href="https://aicabal.xyz/blog/">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <!-- Open Graph -->
@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="AI Cabal">
 <meta property="og:title" content="Blog — AI Cabal | Perspectives on AI in India">
 <meta property="og:description" content="Perspectives, opinions and signal from India's most serious AI network.">
-<meta property="og:url" content="https://aicabal.xyz/blog">
+<meta property="og:url" content="https://aicabal.xyz/blog/">
 <meta property="og:image" content="https://aicabal.xyz/aicabal_xl_dark.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,10 +35,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://aicabal.xyz/blog",
+  "@id": "https://aicabal.xyz/blog/",
   "name": "AI Cabal Blog",
   "description": "Perspectives on AI in India from builders, leaders and practitioners",
-  "url": "https://aicabal.xyz/blog",
+  "url": "https://aicabal.xyz/blog/",
   "publisher": { "@id": "https://aicabal.xyz/#organization" }
 }
 </script>
@@ -146,7 +146,6 @@
   }
   .nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-  /* BLOG HERO */
   .blog-hero {
     padding: 160px 48px 80px;
     border-bottom: 1px solid var(--border);
@@ -187,10 +186,7 @@
     line-height: 1.65;
   }
 
-  /* BLOG GRID */
-  .blog-grid-section {
-    padding: 80px 48px 120px;
-  }
+  .blog-grid-section { padding: 80px 48px 120px; }
 
   .blog-count {
     font-family: 'DM Mono', monospace;
@@ -316,23 +312,11 @@
   }
   .blog-card:hover .blog-card-read { gap: 10px; }
 
-  /* FEATURED (first card spans 2 cols) */
-  .blog-card.featured {
-    grid-column: span 2;
-  }
-  .blog-card.featured .blog-card-img {
-    height: 260px;
-  }
-  .blog-card.featured .blog-card-title {
-    font-size: 36px;
-  }
+  .blog-card.featured { grid-column: span 2; }
+  .blog-card.featured .blog-card-img { height: 260px; }
+  .blog-card.featured .blog-card-title { font-size: 36px; }
 
-  /* FOOTER */
-  .footer-left .social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  .footer-left .social-links { display: flex; flex-direction: column; gap: 10px; }
 
   footer {
     padding: 80px 48px;
@@ -456,7 +440,7 @@
     <li><a href="/#what">What is it</a></li>
     <li><a href="/#inside">Inside</a></li>
     <li><a href="/#who">Who gets in</a></li>
-    <li><a href="/blog" class="active">Blog</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
     <li><a href="https://www.commudle.com/communities/ai-cabal" class="nav-join-btn" target="_blank" rel="noopener noreferrer">Join the Cabal →</a></li>
   </ul>
 </nav>
@@ -474,12 +458,12 @@
   <div class="blog-grid reveal">
 
     <!-- Post 1 - Featured -->
-    <a href="blog/india-ai-community-conversation-problem.html" class="blog-card featured">
+    <a href="/blog/india-ai-community-conversation-problem/" class="blog-card featured">
       <div class="blog-card-meta">
         <span class="blog-card-date">February 15, 2026</span>
         <span class="blog-card-tag">Community</span>
       </div>
-      <img src="blog/images/blog-img-1.png" alt="Why India's AI Community Has a Conversation Problem" class="blog-card-img" loading="lazy">
+      <img src="/blog/images/blog-img-1.png" alt="Why India's AI Community Has a Conversation Problem" class="blog-card-img" loading="lazy">
       <div class="blog-card-title">Why India's AI Community Has a Conversation Problem (And How We're Fixing It)</div>
       <div class="blog-card-excerpt">India has no shortage of AI talent. What it lacks is a room where that talent actually talks to each other — honestly, deeply, without the performance. Here's why that gap exists and what we're building to close it.</div>
       <div class="blog-card-footer">
@@ -489,12 +473,12 @@
     </a>
 
     <!-- Post 2 -->
-    <a href="blog/ai-stack-india-builders-debate.html" class="blog-card">
+    <a href="/blog/ai-stack-india-builders-debate/" class="blog-card">
       <div class="blog-card-meta">
         <span class="blog-card-date">February 24, 2026</span>
         <span class="blog-card-tag">Engineering</span>
       </div>
-      <img src="blog/images/blog-img-2.png" alt="The AI Stack Every Indian Builder Is Debating Right Now" class="blog-card-img" loading="lazy">
+      <img src="/blog/images/blog-img-2.png" alt="The AI Stack Every Indian Builder Is Debating Right Now" class="blog-card-img" loading="lazy">
       <div class="blog-card-title">The AI Stack Every Indian Builder Is Debating Right Now</div>
       <div class="blog-card-excerpt">From model choice to RAG architecture to agent frameworks — the conversations inside India's best AI teams right now are sharper, messier and more opinionated than anything you'll find in a newsletter.</div>
       <div class="blog-card-footer">
@@ -504,12 +488,12 @@
     </a>
 
     <!-- Post 3 -->
-    <a href="blog/llms-to-gtm-india-ai-leaders.html" class="blog-card">
+    <a href="/blog/llms-to-gtm-india-ai-leaders/" class="blog-card">
       <div class="blog-card-meta">
         <span class="blog-card-date">March 5, 2026</span>
         <span class="blog-card-tag">Strategy</span>
       </div>
-      <img src="blog/images/blog-img-3.png" alt="From LLMs to GTM: What India's AI Leaders Are Actually Talking About in 2026" class="blog-card-img" loading="lazy">
+      <img src="/blog/images/blog-img-3.png" alt="From LLMs to GTM: What India's AI Leaders Are Actually Talking About in 2026" class="blog-card-img" loading="lazy">
       <div class="blog-card-title">From LLMs to GTM: What India's AI Leaders Are Actually Talking About in 2026</div>
       <div class="blog-card-excerpt">The gap between India's AI builders and its AI business leaders is closing fast. Here's what's on the mind of CTOs, founders and practitioners when the cameras are off and the real conversations start.</div>
       <div class="blog-card-footer">
