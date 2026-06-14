@@ -322,9 +322,9 @@
     padding: 80px 48px;
     border-top: 1px solid var(--border);
     display: grid;
-    grid-template-columns: 1fr 1.4fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
-    align-items: center;
+    align-items: start;
   }
   .footer-left .logo {
     font-family: 'Bebas Neue', sans-serif;
@@ -353,34 +353,53 @@
     transition: color 0.2s;
   }
   .twitter-link:hover { color: var(--accent); }
-  .footer-middle {
-    text-align: center;
+
+  .footer-explore {
     border-left: 1px solid var(--border);
     border-right: 1px solid var(--border);
-    padding: 0 64px;
+    padding: 0 48px;
   }
-  .dispatch-label {
+  .footer-explore-label {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 4px;
+    margin-bottom: 24px;
+    display: block;
   }
-  .dispatch-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    letter-spacing: 0.08em;
-    color: var(--white);
-    margin-bottom: 6px;
+  .explore-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
-  .dispatch-sub {
+  .explore-list li {
+    margin: 0;
+    padding: 0;
+  }
+  .explore-list li a {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s;
   }
-  .subscribe-row { display: flex; justify-content: center; }
+  .explore-list li:first-child a {
+    border-top: 1px solid var(--border);
+  }
+  .explore-list li a:hover {
+    color: var(--accent);
+  }
+
   .footer-right { text-align: right; }
   .footer-right .footer-cta {
     font-family: 'Bebas Neue', sans-serif;
@@ -421,7 +440,8 @@
     .blog-card-img { height: 200px; }
     .blog-card.featured .blog-card-img { height: 220px; }
     footer { grid-template-columns: 1fr; gap: 48px; padding: 60px 24px; text-align: center; }
-    .footer-middle { border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
+    .footer-explore { border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
+    .explore-list li a { justify-content: center; gap: 12px; }
     .footer-right { text-align: center; }
   }
 
@@ -520,14 +540,17 @@
       </a>
     </div>
   </div>
-  <div class="footer-middle">
-    <div class="dispatch-label">Subscribe to the</div>
-    <div class="dispatch-title">CABAL DISPATCH</div>
-    <p class="dispatch-sub">The signal. In your inbox. No noise.</p>
-    <div class="subscribe-row">
-      <a href="https://aicabal.substack.com/subscribe" class="btn-primary">Subscribe Now →</a>
-    </div>
+
+  <div class="footer-explore">
+    <span class="footer-explore-label">Explore</span>
+    <ul class="explore-list">
+      <li><a href="/">Home →</a></li>
+      <li><a href="/blog/">Blog →</a></li>
+      <li><a href="/#what">What is AI Cabal →</a></li>
+      <li><a href="https://drive.google.com/drive/folders/16-aO386Ic76cwtPwXSUnJ1j2hMXazn5q?usp=drive_link" target="_blank" rel="noopener noreferrer">Brand Guide →</a></li>
+    </ul>
   </div>
+
   <div class="footer-right">
     <div class="footer-cta">FIND YOUR<br><span class="accent">CABAL.</span></div>
     <a href="/#join" class="btn-primary">Join Now →</a>
